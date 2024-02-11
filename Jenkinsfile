@@ -9,7 +9,7 @@ pipeline {
 
         stage('Check folders') {
             steps {
-                ls -la
+                sh "ls -la"
             }
         }
     }

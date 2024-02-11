@@ -12,6 +12,7 @@ pipeline {
             steps {
                 dir(".") {
                     sh "ls -la"
+                }
             }
         }
     }

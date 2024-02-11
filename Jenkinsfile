@@ -3,13 +3,15 @@ pipeline {
     stages {
         stage('Clone Cluster Code') {
             steps {
-                sh "git clone https://github.com/martinoywa/test-project.git"
+                sh "cd ."
+                sh "git clone https://github.com/martinoywa/test-cluster.git"
             }
         }
 
         stage('Check folders') {
             steps {
-                sh "ls -la"
+                dir(".") {
+                    sh "ls -la"
             }
         }
     }
